@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算每日所需熱量</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>計算每日所需熱量</h1>
+        <form id="calorie-form" action="result.html" method="GET">
+            <label for="height">身高（公分）：</label>
+            <input class="input1" type="text" id="height" name="height" inputmode="decimal" required><br><br>
+            
+            <label for="weight">體重（公斤）：</label>
+            <input class="input1" type="text" id="weight" name="weight" inputmode="decimal" required><br><br>
+            
+            <label for="age">年齡：</label>
+            <input class="input1" type="text" id="age" name="age" inputmode="decimal" required><br><br>
+            
+            <label>性別：</label>
+            <input type="radio" name="gender" value="male" required> 男性
+            <input type="radio" name="gender" value="female" required> 女性<br><br>
+            
+            <p class="p2">每天活動量是多少呢？</p>
+            <input type="hidden" id="intensity" name="intensity">
+            <input class="select2" type="button" value="輕度工作" onclick="setIntensity('輕度')">
+            <input class="select2" type="button" value="中度工作" onclick="setIntensity('中度')">
+            <input class="select2" type="button" value="重度工作" onclick="setIntensity('重度')">
+            
+            <input class="select" type="submit" value="送出">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
